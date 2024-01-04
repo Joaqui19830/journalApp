@@ -7,6 +7,7 @@ export const NoteView = () => {
   return (
     // El grid es mas facil para jugar con alineamientos y es mejor que un Box
     <Grid
+      className="animate__animated animate__fadeIn "
       container
       direction="row"
       justifyContent="space-between"

@@ -13,7 +13,7 @@ import { useForm } from "../../hooks";
 import { startCreatingUserWithEmailPassword } from "../../store/auth/thunks";
 import { AuthLayout } from "../layout/AuthLayout";
 
-const formDate = {
+const formData = {
   email: "",
   password: "",
   displayName: "",
@@ -47,7 +47,7 @@ export const RegisterPage = () => {
     displayNameValid,
     emailValid,
     passwordValid,
-  } = useForm(formDate, formValidations);
+  } = useForm(formData, formValidations);
 
   const onSubmit = (event) => {
     event.preventDefault();
@@ -62,7 +62,7 @@ export const RegisterPage = () => {
   return (
     <AuthLayout title="Crear cuenta">
       {/* <h1>FormValid: {isFormValid ? "Válido" : "Incorrecto"}</h1> */}
-      <form onSubmit={onSubmit}>
+      <form onSubmit={onSubmit} className="animate__animated animate__fadeIn ">
         <Grid container>
           <Grid item xs={12} sx={{ mt: 2 }}>
             <TextField
